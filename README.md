@@ -22,4 +22,4 @@ python main.py
 ## 開発支援のお知らせ
 
 認知度向上のため支援寄付を行っています。ご協力頂いた方にはこのリポジトリ説明欄にてご希望のお名前を表記いたします
-寄付リンク:https://buy.stripe.com/dRmaEX2pqcnGbGygLA6Vq0g
+  寄付リンク:https://buy.stripe.com/dRmaEX2pqcnGbGygLA6Vq0g
