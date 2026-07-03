@@ -4,7 +4,11 @@ BASE_URL = "https://qiita.com/api/v2"
 PER_PAGE = 100
 
 # ランキング設定
-TARGET_TAG = "JavaScript"
+TARGET_TAGS = [
+    "Python",
+    "JavaScript",
+    "React",
+]
 DAYS = 7
 MIN_STOCKS = 2
 
