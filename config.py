@@ -1,9 +1,7 @@
-# config.py
+BASE_URL = "https://qiita.com/api/v2"
 
 PER_PAGE = 100
 
-BASE_URL = "https://qiita.com/api/v2/items?query=tag:JavaScript"
-
-TARGET_TAG = "ChromeExtension"
+TARGET_TAG = "JavaScript"
 
 MIN_STOCKS = 2

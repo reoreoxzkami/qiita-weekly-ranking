@@ -1,5 +1,8 @@
 from qiita_api import fetch_articles
 
-query=tag:ChromeExtension
+articles = fetch_articles("JavaScript")
 
-print(f"取得件数 : {len(articles)}")
+print(type(articles))
+print(len(articles))
+
+print(articles[0]["title"])
