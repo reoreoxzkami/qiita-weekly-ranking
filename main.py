@@ -1,13 +1,18 @@
+import os
+
+from config import (
+    TARGET_TAG,
+    OUTPUT_DIR,
+)
 from markdown_generator import generate_markdown
 from qiita_api import fetch_articles
-from filters import filter_recent_articles
 from filters import (
     filter_recent_articles,
     filter_stock_articles,
 )
 from ranking import sort_by_likes
 
-articles = fetch_articles("JavaScript")
+articles = fetch_articles(TARGET_TAG)
 
 print(f"取得件数 : {len(articles)}")
 
@@ -35,10 +40,17 @@ for rank, article in enumerate(articles, start=1):
 
 markdown = generate_markdown(
     articles,
-    "JavaScript",
+    TARGET_TAG,
 )
 
-with open("ranking.md", "w", encoding="utf-8") as f:
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+output_path = os.path.join(
+    OUTPUT_DIR,
+    "ranking.md"
+)
+
+with open(output_path, "w", encoding="utf-8") as f:
     f.write(markdown)
 
-print("ranking.md を作成しました！")
+print(f"{output_path} を作成しました！")
