@@ -1,8 +1,6 @@
 name: Qiita Weekly Ranking
 
 on:
-  schedule:
-    - cron: "0 0 * * 1"
   workflow_dispatch:
 
 jobs:
@@ -34,5 +32,4 @@ jobs:
           git add output/
 
           git commit -m "update qiita ranking" || echo "no changes"
-
           git push
