@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write   # ← これが重要
+  contents: write
 
 jobs:
   build:
