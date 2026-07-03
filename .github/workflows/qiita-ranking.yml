@@ -3,6 +3,9 @@ name: Qiita Weekly Ranking
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write   # ← これが重要
+
 jobs:
   build:
     runs-on: ubuntu-latest
